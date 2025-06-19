@@ -44,7 +44,7 @@ macro "Preprocess Image and Save Final Version" {
             // Step 4: Gaussian Background Subtraction
             run("Duplicate...", "title=Gaussian_Background");
             selectWindow("Gaussian_Background");
-            run("Gaussian Blur...", "sigma=10");
+            run("Gaussian Blur...", "sigma=25");
             imageCalculator("Subtract create", originalImage, "Gaussian_Background");
             close("Gaussian_Background");
 
@@ -52,7 +52,7 @@ macro "Preprocess Image and Save Final Version" {
             rename("Background_Subtracted");
 
             // Step 5: CLAHE Intensity Normalization
-            run("Enhance Local Contrast (CLAHE)", "blocksize=127 histogram=256 maximum=2");
+            run("Enhance Local Contrast (CLAHE)", "blocksize=127 histogram=256 maximum=8");
 
             // Step 6: Global Intensity Normalization
             run("32-bit"); 
