@@ -114,7 +114,6 @@ For each image, **MagiCAL** performs the following sequence:
 MagiCAL/
 ├── MagiCAL.ijm                # ImageJ macro script
 ├── README.md                  # Project documentation
-├── LICENSE                    # MIT License
 ├── .gitignore                 # Ignore temp/image files
 ├── sample_images/             # (Optional) Sample test images
 └── processed_outputs/         # (Optional) Example outputs
